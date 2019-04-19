@@ -1,0 +1,40 @@
+:host {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+
+  li {
+    margin-right: 24px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    a {
+      display: block;
+
+      svg {
+        display: block;
+        width: 128px;
+        height: 128px;
+
+        path {
+          fill: #F9F4F5;
+        }
+      }
+
+      &:hover {
+        svg {
+          path {
+            fill: darken(#F9F4F5, 5%);
+          }
+        }
+      }
+    }
+  }
+}

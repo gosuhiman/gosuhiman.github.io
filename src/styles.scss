@@ -1,9 +1,14 @@
+html {
+  height: 100%;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   background: #0A090C;
   color: #F9F4F5;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 h1, h2, h3, h4 {
@@ -19,4 +24,10 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
