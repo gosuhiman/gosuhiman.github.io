@@ -7,10 +7,15 @@ import {Component, OnInit} from '@angular/core';
 })
 export class MainSkillsComponent implements OnInit {
 
+  enabled: boolean = false;
+
   constructor() {
   }
 
   ngOnInit() {
+    setTimeout(() => {
+      this.enabled = true;
+    }, 500);
   }
 
 }

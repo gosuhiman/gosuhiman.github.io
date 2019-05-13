@@ -15,9 +15,23 @@ ul {
 
   li {
     margin-right: 24px;
+    transition: all 800ms cubic-bezier(.18,3,.34,.83);
+    transform: translateY(-100%);
+    opacity: 0;
 
     &:last-child {
       margin-right: 0;
+    }
+
+    &.enabled {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        transition-delay: $i * 100ms;
+      }
     }
 
     @media (max-width: 1024px) {
@@ -31,16 +45,20 @@ ul {
         display: block;
         width: 128px;
         height: 128px;
+        transition: all 100ms ease-in-out;
 
         path {
           fill: #F9F4F5;
+          transition: all 100ms ease-in-out;
         }
       }
 
       &:hover {
         svg {
+          transform: scale(1.08);
+
           path {
-            fill: darken(#F9F4F5, 5%);
+            fill: #519872;
           }
         }
       }
